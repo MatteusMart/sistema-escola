@@ -16,4 +16,19 @@ const validaLogin = () =>{
         method: 'POST',
         body: dados
     })
-}
+    .then((response)=>response.json())
+    .then((result)=>{
+        // aqui é tratado o retorno ao front
+        if( result.retorno == 'erro'){
+            Swal.fire({
+                icon: 'error',
+                title: 'Atenção...',
+                text: result.mensagem
+              })
+        }else{
+            window.location ="admin"
+        }
+        
+    })
+
+};
