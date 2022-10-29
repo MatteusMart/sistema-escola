@@ -1,6 +1,6 @@
 *{
     box-sizing: border-box;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
 }
 
 body{
@@ -39,10 +39,64 @@ nav ul li{
 nav ul li a{
     text-decoration: none;
     font-size: 1.2rem;
+    color: #343434;
+}
+
+nav ul li a:hover{
+    color: #3a3939b9;
 }
 
 .admin-logo{
     font-size: 1.2rem;
-    color: rgb(42, 42, 42);
+    color: #000000;
     font-weight: bold;
+}
+
+.admin-logout{
+    color: #000000;
+    font-size: 1.2rem;
+}
+
+.admin-logout i {
+    cursor: pointer;
+}
+
+.admin-logout i:hover{
+    color: #3a3939b9;
+}
+
+.grid-professores{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 10px;
+}
+
+.grid-professores input{
+    width: 100%;
+    padding: 8px 12px;
+    border-radius: 5px;
+    border: none;
+}
+
+.btn-cadastrar button{
+    background-color: #14c414;
+    padding: 6px 10px;
+    border: 4px;
+    border-radius: 5px;
+    margin-top: 15px;
+    cursor: pointer;
+
+}
+
+.input-cep{
+    width: 90% !important;
+}
+
+.btn-cep{
+    width: 9% !important;
+    padding: 6px 10px;
+    background-color: rgb(87, 87, 255);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
 }

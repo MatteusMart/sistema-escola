@@ -1,0 +1,7 @@
+const consultaCEP=()=>{
+
+}
+
+const addProfessor=()=>{
+    
+}
