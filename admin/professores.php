@@ -85,13 +85,17 @@
                         </div>
                         <div>
                             <label for="estado">Estado</label>
-                            <input type="text" id="estado" name="estado">
+                            <!-- <input type="text" id="estado" name="estado"> -->
+                            <select name="estado" id="estado">
+                                <option value="SP"></option>
+                            </select>
                         </div>
                         <div>
                             <label for="complemento">complemento</label>
                             <input type="text" id="complemento" name="complemento">
                         </div>
                     </div>
+
                     <div class="btn-cadastrar">
                         <Button onclick="addProfessor()" type="button">Cadastrar</Button>
                     </div>
@@ -99,6 +103,12 @@
             </div>
         </main>
     </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+
+    <script src="assets/js/jquery.inputmask.min.js"></script>
+
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
     <script src="assets/js/script-admin.js"></script>
 </body>
