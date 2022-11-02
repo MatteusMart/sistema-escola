@@ -1,10 +1,10 @@
 <?php
-    // controle de sessao
-    session_start();
-    if(!isset($_SESSION['email'])){
-        // so permite o acesso se a seesao estiver logada
-        header('location:../');
-    }
+    // // controle de sessao
+    // session_start();
+    // if(!isset($_SESSION['email'])){
+    //     // so permite o acesso se a seesao estiver logada
+    //     header('location:../');
+    // }
 ?>
 
 <!DOCTYPE html>

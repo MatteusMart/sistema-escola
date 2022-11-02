@@ -3,6 +3,8 @@ $( document ).ready(function() {
     $('#cpf').inputmask('999.999.999-99')
     $('#telefone').inputmask('(99)99999-9999')
     $('#cep').inputmask('99999-999')
+
+    listaTipo();
 });
 
 
@@ -36,4 +38,36 @@ const consultaCEP=()=>{
 
 const addProfessor=()=>{
     
+}
+
+const listaTipo =()=>{
+    // funçao que lista os tipos para o cadastro
+    // dados da tabela tb_tipos
+    const result = fetch (`../backend/listaTipo.php`)
+
+    .then((response)=>response.json())
+    .then((result)=>{
+        // aqui sera tratado o retorno dos dados do backend
+        // monsta no select tipo os dados da tebela
+
+        result.map((tipo)=>{
+            $('#tipo').append(`
+                <option value="${tipo.id}">${tipo.tipo}</option>
+            `)
+        })
+    })
+}
+
+const addUsuarios =()=>{
+    
+    let dados =new FormData($('form-professores'))
+
+    const result = fetch('../backend/addUsuarios.php',{
+        method : 'POST',
+        body: dados
+    })
+    .then((response)=>response.json())
+    .then((result)=>{
+        // aqui tratamos o retorno do backend
+    })
 }

@@ -71,7 +71,7 @@ nav ul li a:hover{
     gap: 10px;
 }
 
-.grid-professores input{
+.grid-professores input, .grid-professores select {
     width: 100%;
     padding: 8px 12px;
     border-radius: 5px;
@@ -99,4 +99,8 @@ nav ul li a:hover{
     border: none;
     border-radius: 5px;
     cursor: pointer;
+}
+
+#estado{
+    width: 100%;
 }

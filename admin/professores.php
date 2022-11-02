@@ -1,10 +1,10 @@
 <?php
-    // controle de sessao
-    session_start();
-    if(!isset($_SESSION['email'])){
-        // so permite o acesso se a seesao estiver logada
-        header('location:../');
-    }
+    // // controle de sessao
+    // session_start();
+    // if(!isset($_SESSION['email'])){
+    //     // so permite o acesso se a seesao estiver logada
+    //     header('location:../');
+    // }
 ?>
 
 <!DOCTYPE html>
@@ -61,6 +61,16 @@
                             <input type="text" id="cpf" name="cpf">
                         </div>
                         <div>
+                            <label for="data_nascimento">Data Nascimento</label>
+                            <input type="date" id="data_nascimento" name="data_nascimento">
+                        </div>
+                        <div>
+                            <label for="tipo">Tipo</label>
+                            <select name="tipo" id="tipo">
+                                <option value="" disabled selected>Selecione...</option>
+                            </select>
+                        </div>
+                        <div>
                             <label for="cep">CEP</label>
                             <div>
                                 <input class="input-cep" type="text" id="cep" name="cep">
@@ -87,13 +97,43 @@
                             <label for="estado">Estado</label>
                             <!-- <input type="text" id="estado" name="estado"> -->
                             <select name="estado" id="estado">
-                                <option value="SP"></option>
-                            </select>
+                                
+                                <!-- <input type="text" id="estado" name="estado"> -->
+                                <option value="AC">Acre</option>
+                                <option value="AL">Alagoas</option>
+                                <option value="AP">Amapá</option>
+                                <option value="AM">Amazonas</option>
+                                <option value="BA">Bahia</option>
+                                <option value="CE">Ceará</option>
+                                <option value="DF">Distrito Federal</option>
+                                <option value="ES">Espírito Santo</option>
+                                <option value="GO">Goiás</option>
+                                <option value="MA">Maranhão</option>
+                                <option value="MT">Mato Grosso</option>
+                                <option value="MS">Mato Grosso do Sul</option>
+                                <option value="MG">Minas Gerais</option>
+                                <option value="PA">Pará</option>
+                                <option value="PB">Paraíba</option>
+                                <option value="PR">Paraná</option>
+                                <option value="PE">Pernambuco</option>
+                                <option value="PI">Piauí</option>
+                                <option value="RJ">Rio de Janeiro</option>
+                                <option value="RN">Rio Grande do Norte</option>
+                                <option value="RS">Rio Grande do Sul</option>
+                                <option value="RO">Rondônia</option>
+                                <option value="RR">Roraima</option>
+                                <option value="SC">Santa Catarina</option>
+                                <option value="SP">São Paulo</option>
+                                <option value="SE">Sergipe</option>
+                                <option value="TO">Tocantins</option>
+                                <option value="EX">Estrangeiro</option>
+                                </select>
                         </div>
                         <div>
                             <label for="complemento">complemento</label>
                             <input type="text" id="complemento" name="complemento">
                         </div>
+                    
                     </div>
 
                     <div class="btn-cadastrar">
