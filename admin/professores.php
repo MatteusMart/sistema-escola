@@ -137,7 +137,7 @@
                     </div>
 
                     <div class="btn-cadastrar">
-                        <Button onclick="addProfessor()" type="button">Cadastrar</Button>
+                        <Button onclick="addUsuarios()" type="button">Cadastrar</Button>
                     </div>
                 </form>
             </div>
