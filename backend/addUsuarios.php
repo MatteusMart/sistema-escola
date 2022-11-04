@@ -10,7 +10,6 @@
         $telefone =str_replace($limpa,'', $_POST['telefone']);
         $cpf =str_replace($limpa,'', $_POST['cpf']);
         $data_nascimento = $_POST['data_nascimento'];
-        $tipo = $_POST['tipo'];
 
         // endereço
         $cep = $_POST['cep'];
@@ -20,6 +19,17 @@
         $cidade = $_POST['cidade'];
         $estado = $_POST['estado'];
         $complemento = $_POST['complemento'];
+
+        // validação do campo tipo - disabled no option do form
+        if(!isset($tipo)){
+            $retorno = array("retorno"=>"erro","mensagem"=>"escolha o tipo do cadastro");
+            $json = json_encode($retorno,JSON_UNESCAPED_UNICODE);
+            echo $json;
+            exit;
+        }else{
+            $tipo = $_POST['tipo'];
+        }
+    
 
         $senha = $data_nascimento;
 
