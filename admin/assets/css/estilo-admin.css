@@ -88,19 +88,47 @@ nav ul li a:hover{
 
 }
 
+.div-cep{
+    display: flex;
+}
+
 .input-cep{
-    width: 90% !important;
+    width: 100% !important;
+    border-radius: 4px 0px 0px 4px !important;
+    border-right: 0 !important ;
 }
 
 .btn-cep{
-    width: 9% !important;
     padding: 6px 10px;
-    background-color: rgb(87, 87, 255);
+    background-color: white;
     border: none;
-    border-radius: 5px;
+    border-radius: 0px 4px 4px 0px;
     cursor: pointer;
 }
 
 #estado{
     width: 100%;
+}
+
+.tabs{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 15px;
+}
+
+.titulo-principal{
+    margin-bottom: 10px;
+    border: 1px solid black;
+    border-bottom: none;
+    padding: 3px 10px;
+    border-radius: 4px 4px 0px 0px;
+    cursor: pointer;
+}
+
+.tab-ativo{
+    box-shadow: rgb(122, 122, 122) 3px 3px 6px 0px inset, rgba(152, 152, 152, 0.5) -3px -3px 6px 1px inset;
+}
+
+#div-listagem{
+    display: none;
 }

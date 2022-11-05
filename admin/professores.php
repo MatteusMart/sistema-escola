@@ -42,6 +42,14 @@
         <main class="admin-corpo">
             <h2>Gestão de professores</h2>
             <div class="div-professores">
+                <div class="tabs">
+                    <div class="titulo-principal tab-ativo" onclick="abaCadastro()">
+                        <p class="titulo-texto">Cadastro de Usuário</p>
+                    </div>
+                    <div class="titulo-principal" onclick="abaListagem()">
+                        <p class="titulo-texto">Listagem</p>
+                    </div>
+                </div>
                 <form action="" id="form-professores">
                     <div class="grid-professores">
                         <div>
@@ -72,7 +80,7 @@
                         </div>
                         <div>
                             <label for="cep">CEP</label>
-                            <div>
+                            <div class="div-cep">
                                 <input class="input-cep" type="text" id="cep" name="cep">
                                 <button class="btn-cep" onclick="consultaCEP()" type="button"><i class="fa-solid fa-magnifying-glass"></i></button>
                             </div>
@@ -140,6 +148,21 @@
                         <Button onclick="addUsuarios()" type="button">Cadastrar</Button>
                     </div>
                 </form>
+                <div id="div-listagem">
+                    <h4>Listagem de Usuários</h4>
+                    <form id="form-listagem">
+                        <div>
+                            <label for="pesquisar">Pesquisar Usuários</label>
+                            <div class="div-cep">
+                                <input class="input-cep" type="text" name="pesquisar" id="pesquisar">
+                                <button class="btn-cep" type="button" onclick="pesquisarUsuario()"><i class="fa-solid fa-magnifying-glass"></i></button>
+                            </div>
+                        </div>
+                    </form>
+                    <div id="resultado-listagem">
+                        
+                    </div>
+                </div>
             </div>
         </main>
     </div>

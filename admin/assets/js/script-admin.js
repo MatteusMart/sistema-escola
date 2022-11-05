@@ -87,3 +87,46 @@ const addUsuarios =()=>{
             }
     });
 }
+
+// funçap que exibe a aba cadastro e oculta a aba listagem
+const abaCadastro = () =>{
+
+       // esconde o form professor
+       $('#form-professores').show()
+
+       // exibe a div de listagem
+       $('#div-listagem').hide()
+}
+
+// funçao que exibe a aba listagem e oculta a aba cadastro
+const abaListagem =()=>{
+    // esconde o form professor
+    $('#form-professores').hide()
+
+    // exibe a div de listagem
+    $('#div-listagem').show()
+}
+
+const pesquisarUsuario = () =>{
+    // validaçao de campo pesquisar vazio
+    let pesquisar = $('#pesquisar').val()
+
+    if(pesquisar == ''){
+        Swal.fire({
+            icon: 'error',
+            title: 'Atenção!',
+            text: 'Digite um nome ou cpf para pesquisar!',
+          });
+        return
+    }
+    dados = new FormData($('#form-listagem')[0])
+
+    result = fetch('../backend/pesquisarUsuario.php',{
+        method: 'POST',
+        body : dados
+    })
+    .then((response)=>response.json())
+    .then((result)=>{
+
+    })
+}
