@@ -96,6 +96,11 @@ const abaCadastro = () =>{
 
        // exibe a div de listagem
        $('#div-listagem').hide()
+
+       $('#aba-cadastro').addClass('tab-ativo')
+
+        $('#aba-listagem').removeClass('tab-ativo')
+
 }
 
 // funçao que exibe a aba listagem e oculta a aba cadastro
@@ -105,6 +110,12 @@ const abaListagem =()=>{
 
     // exibe a div de listagem
     $('#div-listagem').show()
+
+    $('#aba-cadastro').removeClass('tab-ativo')
+
+    $('#aba-listagem').addClass('tab-ativo')
+
+    
 }
 
 const pesquisarUsuario = () =>{
