@@ -96,6 +96,7 @@ nav ul li a:hover{
     width: 100% !important;
     border-radius: 4px 0px 0px 4px !important;
     border-right: 0 !important ;
+    border: none;
 }
 
 .btn-cep{
@@ -118,7 +119,7 @@ nav ul li a:hover{
 
 .titulo-principal{
     margin-bottom: 10px;
-    border: 1px solid black;
+    border: 2px solid black;
     border-bottom: none;
     padding: 3px 10px;
     border-radius: 4px 4px 0px 0px;
@@ -132,3 +133,38 @@ nav ul li a:hover{
 #div-listagem{
     display: none;
 }
+
+#tabela-listagem table{
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    margin-top: 15px;
+}
+
+#tabela-listagem table td, #tabela-listagem table th{
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+#tabela-listagem table tr:nth-child(even){background-color: #f2f2f2;}
+
+#tabela-listagem table tr:hover{background-color: #ddd;}
+
+#tabela-listagem table th{
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color:rgb(71, 155, 142);
+    color: white;
+}
+
+.btn-visualizar{
+    cursor: pointer;
+    padding: 6px 12px;
+    background-color: rgb(71, 155, 142);
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    font-weight: bold;
+}
+

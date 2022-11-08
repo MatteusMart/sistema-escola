@@ -127,6 +127,44 @@ const pesquisarUsuario = () =>{
     })
     .then((response)=>response.json())
     .then((result)=>{
+        $('#resultado-listagem').html(`
+        <div id="tabela-listagem">
+        <table>
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>Email</th>
+                    <th>Telefone</th>
+                    <th>Cpf</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody id="dados-tabela-listagem">
+               
+            </tbody>
+        </table>
+    </div>`)
 
+        if(result.length == 0 ){
+            $('#dados-tabela-listagem').append(`
+            <tr>
+                <td colspan = "5">Nenhum dado foi encontrado!</td>
+            </tr>
+            `)
+        }else{
+            result.map((usuario)=>{
+            $('#dados-tabela-listagem').append(`
+                <tr>
+                    <td>${usuario.nome}</td>
+                    <td>${usuario.email}</td>
+                    <td>${usuario.telefone}</td>
+                    <td>${usuario.cpf}</td>
+                    <td>
+                        <button class ="btn-visualizar">Visualizar</button>
+                    </td>
+                </tr>
+            `)
+            })
+        }
     })
 }
